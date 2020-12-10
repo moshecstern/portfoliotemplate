@@ -132,9 +132,9 @@ const useStyles = makeStyles(theme => ({
       // paddingBottom: 0,
       // marginRight: 30,
        width: '50%',
-       maxWidth: 400,
+       maxWidth: 250,
       //  position: 'absolute', 
-       left: '50%', 
+       left: '25%', 
        top: '50%',
        transform: 'translate(-50%, 3%)'
   ,    // height: 150,
@@ -304,7 +304,7 @@ const menuId = "primary-search-account-menu";
             <HomeIcon /></IconButton> <p>Home</p></MenuItem></Link>
 
 
-          <Link to={"/staff"}>
+          <Link to={"/about"}>
                 <MenuItem>
                 <IconButton aria-label="About" color="inherit">
             {/* <Logo /> */}
@@ -511,10 +511,46 @@ const menuId = "primary-search-account-menu";
               </Link> */}
               { user && "Welcome "+ user.name }
     </Typography>
-              
+
+        <Link to={"/home"}>
+                <MenuItem>
+                <IconButton aria-label="Home" color="inherit">
+            {/* <Logo /> */}
+            <HomeIcon /></IconButton> <p>Home</p></MenuItem></Link>
+
+
+          <Link to={"/about"}>
+                <MenuItem>
+                <IconButton aria-label="About" color="inherit">
+            {/* <Logo /> */}
+            <GroupIcon />
+          </IconButton><p>About</p></MenuItem></Link>
+
+          <Link to={"/services"}>
+                <MenuItem>
+                <IconButton aria-label="locations" color="inherit">
+            {/* <Logo /> */}
+            <LocationOnIcon />
+          </IconButton><p>Services</p></MenuItem></Link>
+
+          <Link to={"/blog"}>
+                <MenuItem>
+                <IconButton aria-label="blog" color="inherit">
+            {/* <Logo /> */}
+            <ForumIcon />
+          </IconButton><p>Blog</p></MenuItem></Link>
+
+          <Link to={"/contact"}>
+                <MenuItem>
+                <IconButton aria-label="Contact" color="inherit">
+            {/* <Logo /> */}
+             <ContactSupportIcon />
+          </IconButton><p>Contact</p></MenuItem></Link>
+
+     
               
             {/* </IconButton> */}
-            <IconButton
+            {/* <IconButton
               edge="end"
               aria-label="Home"
               aria-controls={menuId}
@@ -526,7 +562,7 @@ const menuId = "primary-search-account-menu";
             <Link to={"/home"} className={classes.iconstyle}>
               <HomeIcon />
               </Link>
-            </IconButton>
+            </IconButton> */}
             {/* <br /> */}
             {/* copy of menu */}
             <IconButton
