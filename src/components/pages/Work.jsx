@@ -1,10 +1,7 @@
 import React from 'react';
 // import React, { useContext, useEffect } from 'react';
 // import AuthContext from '../../context/auth/authContext';
-
-// import {Link} from 'react-router-dom';
-
-const HomePage = () => {
+const Work = () => {
     // const authContext = useContext(AuthContext);
 
     // useEffect(() => {
@@ -16,12 +13,9 @@ const HomePage = () => {
     return (
         <>
 <div>
-    <h2>Welcome Home Page</h2>
-{/* use history to update dom to switch to new page */}
-{/* <button onClick={()=> props.history.push('/about')}>About</button> */}
-{/* end example */}
+    <h2>Welcome Work Page</h2>
 </div>
 </>
 )
 }
-export default HomePage;
+export default Work;
