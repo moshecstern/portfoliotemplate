@@ -4,11 +4,15 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { blue } from '@material-ui/core/colors';
-import Typography from '@material-ui/core/Typography';
-import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
-import Avatar from '@material-ui/core/Avatar';
+// import { blue } from '@material-ui/core/colors';
+// import Typography from '@material-ui/core/Typography';
+// import Card from '@material-ui/core/Card';
+// import CardMedia from '@material-ui/core/CardMedia';
+// import Avatar from '@material-ui/core/Avatar';
+// import IMGProfile from '../../Images/profilepic2.JPG';
+import HeaderAbout from '../modules/About/Header';
+import ProfileimgRow from '../modules/About/ProfileimgRow';
+import AboutMeRow from '../modules/About/AboutMeRow';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -26,41 +30,16 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.secondary,
         backgroundColor: 'blue',
       },
-      h1theme: {
-        color: theme.palette.secondary.dark,
-        paddingLeft: 40,
-        margin: 15,
-        textAlign: 'center',
-        [theme.breakpoints.down('md')]: {
-          fontSize: 50,
-        }
-      },
-      h2theme: {
-        color: theme.palette.secondary.dark,
-        // paddingLeft: 40,
-        margin: 15,
-        marginLeft: '25%',
-        marginRight: '25%',
-        // paddingRight: 40,
-        textAlign: 'center',
-        [theme.breakpoints.down('md')]: {
-          fontSize: 38,
-          marginLeft: 25,
-        marginRight: 25,
-        }
-      },
-      large: {
-        width: theme.spacing(7),
-        height: theme.spacing(7),
+      paperimage: {
+        margin: theme.spacing(8, 4),
         display: 'flex',
-    '& > *': {
-      margin: theme.spacing(1),
-    },
+        flexDirection: 'column',
+        alignItems: 'center',
       },
   }));
 
 
-const About = () => {
+const About = props => {
     const classes = useStyles();
     // const authContext = useContext(AuthContext);
     // useEffect(() => {
@@ -72,14 +51,19 @@ const About = () => {
     return (
         <>
         <div className={classes.root}>
-        <Typography variant="h1" component="h2" className={classes.h1theme}>
+        <HeaderAbout title={'Moshe C Stern'} H2={'Full Stack Developer'} />
+        {/* <Typography variant="h1" component="h2" className={classes.h1theme}>
   Moshe C Stern
 </Typography>
 <Typography variant="h1" component="h2" className={classes.h2theme}>
   Full Stack Developer
-</Typography>
+</Typography> */}
 
-<Grid
+
+<ProfileimgRow Links={""} IMG={'IMGProfile'} Resume={""}   />
+
+
+{/* <Grid
   container
   direction="row"
   justify="center"
@@ -92,9 +76,8 @@ const About = () => {
           </Paper>
           </Grid>
 
-          <Grid item>
-          <Avatar alt="Moshe Stern" src="../../Images/profilepic2.JPG" className={classes.large} />
-</Grid>
+         
+<Grid item xs={false} sm={4} md={6} className={classes.image} />
 
 <Grid item>
   <Paper className={classes.paper}>Resume Link
@@ -105,7 +88,7 @@ const About = () => {
          
 
 
-</Grid>
+</Grid> */}
         {/* </div> */}
 
 
@@ -115,12 +98,7 @@ const About = () => {
 {/* End of 1st section */}
 
 {/* Blurb About Me */}
-        <Grid item xs={12}>
-          <Paper className={classes.paper}>
-          <h2>A Bit About Me</h2>
-          <p>I'm a Full Stack Web Developer and Israeli Military veteran with a life-long dedication to learning through life experience. Effective at creative thinking and problem solving under pressure to accomplish any task. Technical training experience building live applications using Node js, Express, Mysql & MongoDB databases, React, and more. My passion is learning new technologies and understanding how to dive deep into them to create useful, working products to be used by consumers. I am excited to leverage these skills as a part of a team to build better products and experiences.</p>
-          </Paper>
-        </Grid>
+     <AboutMeRow />
 
 {/* Education */}
         <Grid item xs={12}>

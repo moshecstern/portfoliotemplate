@@ -36,6 +36,7 @@ import NoteAddIcon from '@material-ui/icons/NoteAdd';
 import ForumIcon from '@material-ui/icons/Forum';
 import PaymentIcon from '@material-ui/icons/Payment';
 import ContactSupportIcon from '@material-ui/icons/ContactSupport';
+
 // import AuthContext from '../../context/authContext/AuthState.js';
 import AuthContext from '../../context/authContext/authContext.js'
 const useStyles = makeStyles(theme => ({
@@ -249,9 +250,23 @@ const menuId = "primary-search-account-menu";
       </MenuItem> */}
 
       {/* <MenuItem onClick={handleClose}><Link to={"/blog"}>Blog</Link></MenuItem> */}
+
       <MenuItem onClick={handleMenuClose}>
-        <Link to={"/about"}>About </Link>
+        <Link to={"/portfolio"}>Portfolio </Link>
       </MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        <Link to={"/values"}>Values </Link>
+      </MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        <Link to={"/resume"}>Resume </Link>
+      </MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        <Link to={"/skills"}>Skills </Link>
+      </MenuItem>
+
+     
+
+     
       <MenuItem onClick={handleMenuClose}>
         <Link to={"/services"}>Services </Link>
       </MenuItem>

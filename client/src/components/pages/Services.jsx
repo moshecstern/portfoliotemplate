@@ -3,8 +3,8 @@ import React from 'react';
 // import AuthContext from '../../context/auth/authContext';
 
 // import {Link} from 'react-router-dom';
-import ServicesMenu from '../modules/Services/ServicesMenu'
-
+import ServicesMenu from '../modules/Services/ServicesMenu';
+import Header from '../modules/About/Header';
 const Services = () => {
     // const authContext = useContext(AuthContext);
 
@@ -17,7 +17,8 @@ const Services = () => {
     return (
         <>
 <div>
-    <h2>Welcome Services Page</h2>
+<Header title={'Services'} />
+    {/* <h2>Welcome Services Page</h2> */}
 {/* use history to update dom to switch to new page */}
 {/* <button onClick={()=> props.history.push('/about')}>About</button> */}
 {/* end example */}

@@ -21,8 +21,11 @@ import Navbar from './components/modules/layout/Navbar.jsx';
 import Homepage from './components/pages/Homepage.jsx';
 import About from './components/pages/About.jsx';
 import Services from './components/pages/Services';
-
+import Contact from './components/pages/Contact';
 import Payment from './components/pages/Payment';
+import Blog from './components/pages/Blog'
+
+
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -63,6 +66,8 @@ function App() {
       <Route exact path="/payment" component={Payment} />
       <Route exact path="/success" component={Success} />
       <Route exact path="/payfail" component={PayFail} />
+      <Route exact path="/contact" component={Contact} />
+      <Route exact path="/blog" component={Blog} />
 
       </Switch>
     </div>
