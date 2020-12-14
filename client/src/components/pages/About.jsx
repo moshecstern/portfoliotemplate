@@ -13,6 +13,10 @@ import Grid from '@material-ui/core/Grid';
 import HeaderAbout from '../modules/About/Header';
 import ProfileimgRow from '../modules/About/ProfileimgRow';
 import AboutMeRow from '../modules/About/AboutMeRow';
+import Skills from '../modules/About/Skills';
+import Experience from '../modules/About/Experience'
+import ClientsPast from '../modules/About/ClientsPast';
+import Contact from './Contact';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -101,23 +105,26 @@ const About = props => {
      <AboutMeRow />
 
 {/* Education */}
-        <Grid item xs={12}>
+        {/* <Grid item xs={12}>
           <Paper className={classes.paper}>Input Education</Paper>
-        </Grid>
+        </Grid> */}
 
 {/* Expeirence */}
-<Grid item xs={12}>
+{/* <Grid item xs={12}>
           <Paper className={classes.paper}>Input Experience</Paper>
-        </Grid>
+        </Grid> */}
 
 {/* Past Clients */}
-
+<ClientsPast />
 {/* Past Projects */}
+<Experience />
 
 {/* Skills */}
 
-{/* Contact (put in footer) */}
+<Skills />
 
+{/* Contact (put in footer) */}
+<Contact />
       {/* </Grid> */}
     </div>
 

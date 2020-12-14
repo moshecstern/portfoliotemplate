@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 // import IMGProfile from '../../Images/profilepic2.JPG';
 // import HeaderAbout from '../modules/About/Header';
+import SocialLinks from './SocilaLinks'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -33,10 +34,12 @@ return(
   alignItems="center"
 >
 <Grid item>
-  <Paper className={classes.paper}
+  {/* <Paper className={classes.paper}
   
   >social media links/ logos
-          </Paper>
+          </Paper> */}
+          <SocialLinks />
+
           </Grid>
 
           {/* <Grid item> */}

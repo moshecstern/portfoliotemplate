@@ -5,6 +5,8 @@ import React from 'react';
 // import {Link} from 'react-router-dom';
 import ServicesMenu from '../modules/Services/ServicesMenu';
 import Header from '../modules/About/Header';
+import Projects from '../modules/Services/Projects';
+
 const Services = () => {
     // const authContext = useContext(AuthContext);
 
@@ -23,6 +25,8 @@ const Services = () => {
 {/* <button onClick={()=> props.history.push('/about')}>About</button> */}
 {/* end example */}
 <ServicesMenu />
+
+<Projects />
 </div>
 </>
 )
