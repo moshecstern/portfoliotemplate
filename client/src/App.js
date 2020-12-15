@@ -24,7 +24,7 @@ import Services from './components/pages/Services';
 import Contact from './components/pages/Contact';
 import Payment from './components/pages/Payment';
 import Blog from './components/pages/Blog'
-
+import Footer from './components/modules/layout/Footer';
 
 
 if (localStorage.token) {
@@ -44,6 +44,37 @@ const useStyles = makeStyles(theme => ({
   }
 
 }));
+const SectionLinks = [
+  {
+      link: '/home',
+      linkName: 'Home'
+  },
+  {
+      link: '/allprojects',
+      linkName: 'All Projects'
+  },
+  {
+      link: '#mysqlprojects',
+      linkName: 'MYSQL'
+  },
+  {
+      link: '#firebaseprojects',
+      linkName: 'Firebase'
+  },
+  {
+      link: '#apiprojects',
+      linkName: 'REST API'
+  },
+  {
+      link: '#nodeprojects',
+      linkName: 'Node JS'
+  },
+  {
+      link: '#javascriptgames',
+      linkName: 'JS Games'
+  },
+ 
+]
 function App() {
   const classes = useStyles();
   return (
@@ -70,6 +101,7 @@ function App() {
       <Route exact path="/blog" component={Blog} />
 
       </Switch>
+      <Footer Links={SectionLinks} />
     </div>
     </Router>
     </AlertState>
