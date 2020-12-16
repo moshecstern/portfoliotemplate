@@ -17,6 +17,7 @@ import Skills from '../modules/About/Skills';
 import Experience from '../modules/About/Experience'
 import ClientsPast from '../modules/About/ClientsPast';
 import Contact from './Contact';
+import H2 from '../modules/layout/H2';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -29,10 +30,11 @@ const useStyles = makeStyles((theme) => ({
       color: theme.palette.text.secondary,
     },
     onerow: {
-        padding: theme.spacing(2),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-        backgroundColor: 'blue',
+        // padding: theme.spacing(2),
+        margin: theme.spacing(2),
+        // textAlign: 'center',
+        // color: theme.palette.text.secondary,
+        // backgroundColor: 'blue',
       },
       paperimage: {
         margin: theme.spacing(8, 4),
@@ -55,6 +57,7 @@ const About = props => {
     return (
         <>
         <div className={classes.root}>
+        <div className={classes.onerow}>
         <HeaderAbout title={'Moshe C Stern'} H2={'Full Stack Developer'} />
         {/* <Typography variant="h1" component="h2" className={classes.h1theme}>
   Moshe C Stern
@@ -64,8 +67,9 @@ const About = props => {
 </Typography> */}
 
 
-<ProfileimgRow Links={""} IMG={'IMGProfile'} Resume={""}   />
 
+<ProfileimgRow Links={""} IMG={'IMGProfile'} Resume={""}   />
+ </div>
 
 {/* <Grid
   container
@@ -100,10 +104,12 @@ const About = props => {
       {/* <Grid container spacing={3}> */}
      
 {/* End of 1st section */}
-
+<div className={classes.onerow}>
 {/* Blurb About Me */}
-     <AboutMeRow />
-
+<H2 title={'About Me'} />
+     <AboutMeRow body1={"I'm a Full Stack Web Developer and Israeli Military veteran with a life-long dedication to learning through life experience. Effective at creative thinking and problem solving under pressure to accomplish any task. Technical training experience building live applications using Node js, Express, Mysql & MongoDB databases, React, and more. My passion is learning new technologies and understanding how to dive deep into them to create useful, working products to be used by consumers. I am excited to leverage these skills as a part of a team to build better products and experiences."}/>
+     
+</div>
 {/* Education */}
         {/* <Grid item xs={12}>
           <Paper className={classes.paper}>Input Education</Paper>
@@ -115,16 +121,21 @@ const About = props => {
         </Grid> */}
 
 {/* Past Clients */}
+<div className={classes.onerow}>
 <ClientsPast />
+</div>
 {/* Past Projects */}
+<div className={classes.onerow}>
 <Experience />
-
+</div>
 {/* Skills */}
-
+<div className={classes.onerow}>
 <Skills />
-
+</div>
 {/* Contact (put in footer) */}
+<div className={classes.onerow}>
 <Contact />
+</div>
       {/* </Grid> */}
     </div>
 

@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 		color: '#fff',
 		height: '100%',
 		left: 0,
-		overflowY: 'auto',
+		overflowY: 'overlay',
 		position: 'fixed',
 		textAlign: 'right',
 		top: 0,

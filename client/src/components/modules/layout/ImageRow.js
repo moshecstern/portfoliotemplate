@@ -48,9 +48,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const cards = [1, 2, 3];
+// const cards = [1, 2, 3];
 
-export default function Album(props) {
+// export default function Album(props) {
+  const ImageRow = props => {
   const classes = useStyles();
 
   return (
@@ -86,13 +87,14 @@ export default function Album(props) {
         <Container className={classes.cardGrid} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {cards.map((card) => (
+            
+            {props.MyClients && props.MyClients.map(card => (
               <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
-                    title="Image title"
+                    image={card.url}
+                    title="Project title"
                   />
                   {/* <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
@@ -119,3 +121,4 @@ export default function Album(props) {
    
   );
 }
+export default ImageRow;

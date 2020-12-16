@@ -15,14 +15,24 @@ const useStyles = makeStyles((theme) => ({
     const classes = useStyles();
 
 
-
+const Clients = [
+{
+  url: 'images/profileimage2.JPG'
+},
+{
+  url: 'images/profileimage2.JPG'
+},
+{
+  url: 'images/profileimage2.JPG'
+}
+]
 
 
     return(
         <>
 <H2 title={'Past Clients'} />
 
-<ImageRow />
+<ImageRow MyClients={Clients} />
 
 
     </>

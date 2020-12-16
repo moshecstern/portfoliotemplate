@@ -25,7 +25,7 @@ import Contact from './components/pages/Contact';
 import Payment from './components/pages/Payment';
 import Blog from './components/pages/Blog'
 import Footer from './components/modules/layout/Footer';
-
+import AllProjects from './components/modules/Services/Projects';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -50,30 +50,39 @@ const SectionLinks = [
       linkName: 'Home'
   },
   {
-      link: '/allprojects',
-      linkName: 'All Projects'
+      link: '/about',
+      linkName: 'About'
   },
   {
-      link: '#mysqlprojects',
-      linkName: 'MYSQL'
+      link: '/services',
+      linkName: 'Services'
   },
   {
-      link: '#firebaseprojects',
-      linkName: 'Firebase'
+      link: '/blog',
+      linkName: 'Blog'
   },
   {
-      link: '#apiprojects',
-      linkName: 'REST API'
-  },
+      link: '/contact',
+      linkName: 'Contact'
+  }
+]
+const SecondaryLinks = [
   {
-      link: '#nodeprojects',
-      linkName: 'Node JS'
-  },
-  {
-      link: '#javascriptgames',
-      linkName: 'JS Games'
-  },
- 
+    link: '/resume',
+    linkName: 'Resume'
+},
+{
+    link: '/allproducts',
+    linkName: 'Products'
+},
+{
+    link: '/allxperience',
+    linkName: 'Full Experience'
+},
+{
+    link: '/allprojects',
+    linkName: 'All Projects'
+},
 ]
 function App() {
   const classes = useStyles();
@@ -99,9 +108,9 @@ function App() {
       <Route exact path="/payfail" component={PayFail} />
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/blog" component={Blog} />
-
+      <Route exact path="/allprojects" component={AllProjects} />
       </Switch>
-      <Footer Links={SectionLinks} />
+      <Footer Links={SectionLinks} SecondaryLinks={SecondaryLinks}/>
     </div>
     </Router>
     </AlertState>
