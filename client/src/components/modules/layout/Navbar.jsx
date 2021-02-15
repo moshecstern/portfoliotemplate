@@ -5,39 +5,25 @@ import { Link } from 'react-router-dom';
 // import ContactContext from '../../context/contact/contactContext';
 // import AuthContext from '../../context/authContext/AuthState'
 import { fade, makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-// import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
-// import InputBase from "@material-ui/core/InputBase";
-import Badge from "@material-ui/core/Badge";
-import MenuItem from "@material-ui/core/MenuItem";
-import Menu from "@material-ui/core/Menu";
 import MenuIcon from "@material-ui/icons/Menu";
-// import SearchIcon from "@material-ui/icons/Search";
-// import AccountCircle from "@material-ui/icons/AccountCircle";
-// import MailIcon from "@material-ui/icons/Mail";
-// import NotificationsIcon from "@material-ui/icons/Notifications";
-// import MoreIcon from "@material-ui/icons/MoreVert";
 import logo from '../../../Images/whoweare.png';
-import IconButton from '@material-ui/core/IconButton';
-// import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-// import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
+import {
+  IconButton,
+  Menu,
+  MenuItem,
+  Badge,
+  Typography,
+  Toolbar,
+  Avatar,
+  AppBar
+} from '@material-ui/core';
+
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-// import MoreIcon from '@material-ui/icons/More';
-// import Divider from '@material-ui/core/Divider';
-// import Card from '@material-ui/core/Card';
-// import CardMedia from '@material-ui/core/CardMedia';
-// import CardContent from '@material-ui/core/CardContent';
 import HomeIcon from '@material-ui/icons/Home';
 import GroupIcon from '@material-ui/icons/Group';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
-import NoteAddIcon from '@material-ui/icons/NoteAdd';
 import ForumIcon from '@material-ui/icons/Forum';
-import PaymentIcon from '@material-ui/icons/Payment';
 import ContactSupportIcon from '@material-ui/icons/ContactSupport';
-
-// import AuthContext from '../../context/authContext/AuthState.js';
 import AuthContext from '../../context/authContext/authContext.js'
 const useStyles = makeStyles(theme => ({
     grow: {
@@ -113,8 +99,8 @@ const useStyles = makeStyles(theme => ({
       marginBottom: 0,
       paddingBottom: 0,
       textAlign: 'center',
-    width: '100%',
-    height: '80%',
+    width: '30%',
+    height: '40%',
     objectFit: 'contain',
     // backgroundSize: 'cover',
     // backgroundRepeat: 'no-repeat',
@@ -452,8 +438,8 @@ const menuId = "primary-search-account-menu";
   //   }}
 >
      <Link to={"/home"} >
-{/* <Avatar variant="square" alt="Churchland Psychological Center" src={logo} className={classes.logo}/> */}
-         <img src={logo} alt="Churchland Psychological Center" className={classes.logo}></img>
+<Avatar variant="square" alt="Churchland Psychological Center" src={logo} className={classes.logo}/>
+         {/* <img src={logo} alt="Churchland Psychological Center" className={classes.logo}></img> */}
           {/* <Typography className={classes.title} variant="h1" noWrap>
           Churchland Psychological Center
           </Typography> */}
